@@ -5,7 +5,7 @@ import { File } from "@/components/icons";
 
 import "@xyflow/react/dist/style.css";
 import { Server, ShieldX, Users, VenetianMask } from "lucide-react";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const nodeDefaults = {
   sourcePosition: Position.Right,
@@ -208,18 +208,25 @@ const initialEdges = [
 function Flow() {
   const [isResponsive, setIsResponsive] = useState(false);
 
-  const onResize = useCallback(() => {
-    setIsResponsive(window.innerWidth < 768);
-  }, []);
-
-  useState(() => {
-    window.addEventListener("resize", onResize);
-    onResize();
-
-    return () => {
-      window.removeEventListener("resize", onResize);
+  useEffect(() => {
+    const checkResponsiveness = () => {
+      // Safely check window only on client-side
+      if (typeof window !== "undefined") {
+        setIsResponsive(window.innerWidth < 768);
+      }
     };
-  });
+
+    // Initial check
+    checkResponsiveness();
+
+    // Add event listener
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", checkResponsiveness);
+
+      // Cleanup listener
+      return () => window.removeEventListener("resize", checkResponsiveness);
+    }
+  }, []);
 
   return (
     <div className={`w-full ${isResponsive ? "h-[50vh]" : "h-[30vh]"}`}>
