@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight, ChevronsUpDown, Plus } from "lucide-react";
 
 import Image from "next/image";
 import {
@@ -10,7 +9,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Button } from "@/components/ui/button"; // Assuming you have this Button component
 
 export function NavHeader() {
   const { open, toggleSidebar } = useSidebar();

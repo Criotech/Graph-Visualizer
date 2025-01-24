@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Separator } from "../ui/separator";
-import { Button } from "../ui/button";
 import {
   MenuItem1,
   MenuItem2,

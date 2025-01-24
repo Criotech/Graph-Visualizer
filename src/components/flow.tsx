@@ -1,5 +1,5 @@
 "use client";
-import { ReactFlow, Position, Controls, MiniMap } from "@xyflow/react";
+import { ReactFlow, Position, Controls } from "@xyflow/react";
 import CustomNode from "./CustomNode";
 import { File } from "@/components/icons";
 
@@ -68,7 +68,10 @@ const InfoTwo = () => {
 
       <div className="mt-[5px] flex flex-wrap gap-2">
         {["1.2.3.4", "Loremipsum", "1.2.3.4", "1.2.3.4"].map((tag, index) => (
-          <span className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]">
+          <span
+            key={index}
+            className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]"
+          >
             {tag}
           </span>
         ))}
@@ -105,7 +108,10 @@ const InfoFour = () => {
 
       <div className="mt-[5px] flex flex-wrap gap-2">
         {["1.2.3.4", "Loremipsum", "1.2.3.4", "1.2.3.4"].map((tag, index) => (
-          <span className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]">
+          <span
+            key={index}
+            className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]"
+          >
             {tag}
           </span>
         ))}
@@ -120,8 +126,6 @@ const initialNodes = [
     data: {
       id: "1",
       name: "Loremipsumm",
-      job: "Developer",
-      emoji: "🤩",
       icon: <VenetianMask size={26} color="#C6190D" />,
       iconBg: "#FFF1F0",
       badgeIcon: <Users size={10} color="#fff" />,
@@ -138,8 +142,6 @@ const initialNodes = [
     data: {
       id: "2",
       name: "Loremipsu",
-      job: "Developer",
-      emoji: "🤩",
       icon: <Server size={26} color="#6236CC" />,
       iconBg: "#ECF5FF",
       info: <InfoTwo />,
@@ -153,8 +155,6 @@ const initialNodes = [
     data: {
       id: "3",
       name: "Loremipsu",
-      job: "Developer",
-      emoji: "🤩",
       icon: <Server size={26} color="#6236CC" />,
       iconBg: "#ECF5FF",
       info: <InfoTwo />,
@@ -168,8 +168,6 @@ const initialNodes = [
     data: {
       id: "4",
       name: "Loremipsumdolorsit",
-      job: "Developer",
-      emoji: "🤩",
       icon: <Server size={26} color="#6236CC" />,
       iconBg: "#ECF5FF",
       badgeIcon: <ShieldX size={10} color="#fff" />,
@@ -187,8 +185,6 @@ const initialNodes = [
     data: {
       id: "5",
       name: "Loremipsumdolorsit002",
-      job: "Developer",
-      emoji: "🤩",
       icon: <Server size={26} color="#6236CC" />,
       iconBg: "#ECF5FF",
       badgeIcon: <ShieldX size={10} color="#fff" />,
@@ -203,8 +199,8 @@ const initialNodes = [
 ];
 
 const initialEdges = [
-  { id: "e1-2", source: "1", target: "2", type: "smoothstep" },
-  { id: "e2-3", source: "2", target: "3", type: "smoothstep" },
+  { id: "e1-2", source: "1", target: "2" },
+  { id: "e2-3", source: "2", target: "3" },
   { id: "e3-4", source: "3", target: "4" },
   { id: "e3-5", source: "3", target: "5" },
 ];

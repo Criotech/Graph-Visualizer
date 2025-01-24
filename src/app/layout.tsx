@@ -4,11 +4,9 @@ import { AppSidebar } from "@/components/sidebar/AppSidebar";
 import DashboardContent from "@/components/DashboardContent";
 import { Public_Sans } from "next/font/google";
 
-import { type Metadata } from "next";
+import {  Metadata } from "next";
 import {
-  SidebarInset,
   SidebarProvider,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {

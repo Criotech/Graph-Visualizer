@@ -14,7 +14,6 @@ import { DataTable } from "@/components/DataTable";
 import { ColumnDef } from "@tanstack/react-table";
 import ContextualRisk from "@/components/RiskCard";
 
-// Types
 interface SectionProps {
   title: string;
   children: React.ReactNode;
@@ -32,7 +31,6 @@ interface Asset {
   risk: "Critical" | "Medium" | "Low";
 }
 
-// Data
 const assets: Asset[] = [
   { name: "Loremipsumdolorsit", ip: "192.168.1.1", risk: "Critical" },
   { name: "Loremipsumdolorsit002", ip: "192.168.1.2", risk: "Critical" },
