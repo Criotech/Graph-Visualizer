@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 
-import { AppSidebar } from "@/components/AppSidebar";
+import { AppSidebar } from "@/components/sidebar/AppSidebar";
 import DashboardContent from "@/components/DashboardContent";
+import { Public_Sans } from "next/font/google";
 
-import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import {
   SidebarInset,
@@ -17,15 +17,19 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${publicSans.className}`}>
       <body>
         <SidebarProvider>
           <AppSidebar />
-          <DashboardContent />
+          <DashboardContent>{children}</DashboardContent>
         </SidebarProvider>
       </body>
     </html>
