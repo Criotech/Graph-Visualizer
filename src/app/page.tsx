@@ -241,7 +241,7 @@ const RightPanel: FC = () => (
     </div>
 
     <div className="mt-5">
-      <h1 className="text-xl font-bold text-[#02983E]">
+      <h1 className="text-xl font-bold text-primary-green">
         Lorem ipsum Dolor Sit
       </h1>
 
