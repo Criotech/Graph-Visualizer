@@ -20,16 +20,16 @@ const InfoOne = () => {
   return (
     <div>
       <div>
-        <span className="text-semibold bg-[#FFF1F0] pr-2 text-[13px] font-semibold text-[#E5372B]">
+        <p className="text-semibold w-48 rounded-md bg-red-50 pr-2 text-13 font-semibold leading-[22px] text-red-700">
           Lorem Ipsum Dolor Sit
-        </span>
+        </p>
 
         {/* Grid Items */}
         <div className="ml-4 mt-3 grid grid-cols-3 gap-2">
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={index}
-              className="text-semibold bg-[#FFF1F0] pr-2 text-[13px] font-semibold text-[#E5372B]"
+              className="text-semibold w-28 rounded-md bg-yellow-100 pr-2 text-13 font-semibold leading-[22px] text-yellow-600"
             >
               1.2.3.4
             </div>
@@ -37,7 +37,7 @@ const InfoOne = () => {
         </div>
 
         {/* Highlighted Item */}
-        <div className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]">
+        <div className="text-semibold mt-3 w-fit bg-blue-100 pr-2 text-13 font-semibold text-blue-600">
           Lorem: 1.2.3.4
         </div>
       </div>
@@ -49,19 +49,22 @@ const InfoTwo = () => {
   return (
     <div>
       <div className="flex items-center">
-        <div className="flex size-[39px] items-center justify-center rounded-full bg-[#ECF5FF]">
-          <Server size={19} color="#6236CC" />
+        <div
+          className="flex items-center justify-center rounded-full bg-blue-100"
+          style={{ width: "39px", height: "39px" }}
+        >
+          <Server size={20} className="text-blue-600" />
         </div>
-        <h3 className="ml-3 text-[13px] font-semibold text-gray-800">
-          Loremipsu
-        </h3>
+        <h3 className="ml-3 text-13 font-semibold text-gray-800">Loremipsu</h3>
       </div>
 
-      <p className="mt-[5px] flex items-center gap-2 text-[15px]">
+      <p className="mt-[5px] flex items-center gap-2 text-15">
         <File />
-        <span className="font-bold text-[#525D73]">Lorem:</span> Loremipsum
-        Loremipsum
-        <span className="ml-2 bg-[#F2EDFF] font-bold text-[#6236CC]">
+        <span className="text-15 font-bold text-gray-soft-700">
+          Lorem:
+        </span>{" "}
+        Loremipsum Loremipsum
+        <span className="ml-2 rounded-sm bg-blue-100 p-1 text-13 font-bold text-blue-600">
           1.2.3.4
         </span>
       </p>
@@ -70,7 +73,7 @@ const InfoTwo = () => {
         {["1.2.3.4", "Loremipsum", "1.2.3.4", "1.2.3.4"].map((tag, index) => (
           <span
             key={index}
-            className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]"
+            className="text-semibold mt-3 w-fit rounded-sm bg-blue-100 p-1 pr-2 text-13 font-semibold text-blue-600"
           >
             {tag}
           </span>
@@ -84,24 +87,25 @@ const InfoFour = () => {
   return (
     <div>
       <div className="flex items-center">
-        <div className="relative flex size-[39px] items-center justify-center rounded-full bg-[#ECF5FF]">
-          <Server size={19} color="#6236CC" />
+        <div
+          className="relative flex items-center justify-center rounded-full bg-blue-100"
+          style={{ width: "39px", height: "39px" }}
+        >
+          <Server size={20} className="text-blue-600" />
 
           <div
-            className={`absolute -top-1 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-[#C6190D]`}
+            className={`absolute -top-2 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#C6190D]`}
           >
             <ShieldX size={10} color="#fff" />
           </div>
         </div>
-        <h3 className="ml-3 text-[13px] font-semibold text-gray-800">
-          Loremipsu
-        </h3>
+        <h3 className="ml-3 text-13 font-semibold text-gray-800">Loremipsu</h3>
       </div>
 
-      <p className="mt-[5px] flex items-center gap-2 text-[15px]">
+      <p className="mt-[5px] flex items-center gap-2 text-15">
         <File />
-        <span className="font-bold text-[#525D73]">Lorem:</span>
-        <span className="ml-2 bg-[#FFF9ED] font-bold text-[#EBA622]">
+        <span className="font-bold text-gray-soft-700">Lorem:</span>
+        <span className="ml-2 bg-yellow-100 font-bold text-yellow-600">
           1.2.3.4
         </span>
       </p>
@@ -110,7 +114,7 @@ const InfoFour = () => {
         {["1.2.3.4", "Loremipsum", "1.2.3.4", "1.2.3.4"].map((tag, index) => (
           <span
             key={index}
-            className="text-semibold mt-3 w-fit bg-[#F2EDFF] pr-2 text-[13px] font-semibold text-[#6236CC]"
+            className="text-semibold mt-3 w-fit rounded-sm bg-blue-100 p-1 pr-2 text-13 font-semibold text-blue-600"
           >
             {tag}
           </span>
@@ -199,10 +203,32 @@ const initialNodes = [
 ];
 
 const initialEdges = [
-  { id: "e1-2", source: "1", target: "2", type: "smoothstep", markerEnd: { type: MarkerType.Arrow } },
-  { id: "e2-3", source: "2", target: "3", type: "smoothstep", markerEnd: { type: MarkerType.Arrow }  },
-  { id: "e3-4", source: "3", target: "4", type: "bezier", markerEnd: { type: MarkerType.Arrow }  },
-  { id: "e3-5", source: "3", target: "5", type: "bezier", markerEnd: { type: MarkerType.Arrow }  },
+  {
+    id: "e1-2",
+    source: "1",
+    target: "2",
+    type: "smoothstep",
+    markerEnd: { type: MarkerType.Arrow },
+  },
+  {
+    id: "e2-3",
+    source: "2",
+    target: "3",
+    type: "smoothstep",
+    markerEnd: { type: MarkerType.Arrow },
+  },
+  {
+    id: "e3-4",
+    source: "3",
+    target: "4",
+    markerEnd: { type: MarkerType.Arrow },
+  },
+  {
+    id: "e3-5",
+    source: "3",
+    target: "5",
+    markerEnd: { type: MarkerType.Arrow },
+  },
 ];
 
 function Flow() {
@@ -239,8 +265,7 @@ function Flow() {
         fitViewOptions={{
           padding: 0.5,
         }}
-      >
-      </ReactFlow>
+      ></ReactFlow>
     </div>
   );
 }

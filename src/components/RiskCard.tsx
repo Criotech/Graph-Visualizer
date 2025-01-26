@@ -22,7 +22,7 @@ const ContextualRisk = () => {
             >
               <span className="flex items-center text-15 font-bold">
                 <span
-                  className={`mr-2 h-2 w-2 rounded-full sm:h-3 sm:w-3 ${risk.color}`}
+                  className={`mr-2 rounded-full md:h-[7px] md:w-[7px] ${risk.color}`}
                 />
                 {risk.count}
               </span>

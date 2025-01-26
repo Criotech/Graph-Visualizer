@@ -65,13 +65,13 @@ const Section: FC<SectionProps> = ({ title, children, className = "" }) => (
 );
 
 const InfoItem: FC<InfoItemProps> = ({ label, value, className }) => (
-  <div className="mb-3 mt-3 flex items-center justify-between text-gray-soft-700">
+  <div className="mb-3 mt-3 flex items-center gap-8 text-gray-soft-700">
     <p className={`text-15 font-bold ${className}`}>{label}</p>
-    <span className="text-15 text-gray-soft-700">{value}</span>
+    <span className="text-15">{value}</span>
   </div>
 );
 
-const ServerCard: FC = () => (
+const ServerCard = () => (
   <Accordion type="single" collapsible className="w-full">
     <div className="mt-3 rounded-md bg-white px-[18px] py-[13px] shadow-light">
       <p className="text-15 font-bold text-[#030229]">Lorem P</p>
@@ -119,9 +119,7 @@ const columns: ColumnDef<Asset>[] = [
     header: "Asset",
     cell: ({ row }) => (
       <div className="flex items-center gap-3">
-        <div
-          className="flex items-center justify-center rounded-full bg-blue-100 w-11 h-11"
-        >
+        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-100">
           <Server size={22} className="text-blue-600" />
         </div>
         <div>
@@ -177,7 +175,7 @@ const LeftPanel: FC = () => (
           label="Lorem Ipsum Dolor"
           value={
             <span className="flex items-center gap-2">
-              <Check color="#08B94E" /> Yes
+              <Check color="#08B94E" size={15} /> Yes
             </span>
           }
         />
@@ -203,7 +201,7 @@ const LeftPanel: FC = () => (
 const RightPanel: FC = () => (
   <div className="col-span-1 mt-[27px] h-fit rounded-[15px] bg-white px-[30px] py-5 shadow-light md:col-span-2 lg:col-span-2">
     <h1 className="text-xl font-bold text-[#02983E]">Lorem Lorem Lorem</h1>
-    <div className="col-span-1 mt-5 rounded-md bg-background px-[30px] py-5 shadow md:col-span-1">
+    <div className="rounded-15 col-span-1 mt-5 bg-background px-[30px] py-5 shadow md:col-span-1">
       <Flow />
       <Separator className="bg-gray-soft-100" />
       <div className="mt-4 flex flex-wrap gap-4 sm:gap-6">

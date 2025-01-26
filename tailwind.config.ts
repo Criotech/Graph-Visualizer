@@ -89,11 +89,16 @@ export default {
           "700": "hsl(var(--slate-700))",
         },
         red: {
+          "50": "hsl(var(--red-50))",
           "700": "hsl(var(--red-700))",
         },
         orange: {
           "700": "hsl(var(--orange-700))",
         },
+        yellow: {
+          "100": "hsl(var(--yellow-100))",
+          "600": "hsl(var(--yellow-600))",
+        }
       },
       fontSize: {
         "10": "0.625rem", // 10px

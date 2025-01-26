@@ -36,11 +36,11 @@ function CustomNode({ data }: { data: DataItem }) {
           )}
         </div>
         <div className="flex flex-col">
-          <span className="text-center text-[13px] font-semibold text-[#525D73]">
+          <span className="text-center text-13 font-semibold text-gray-soft-700">
             {data.name}
           </span>
           {data.ip && (
-            <span className="text-center text-[10px] font-medium">
+            <span className="text-center text-10 text-gray-soft-500 font-medium">
               {data.ip}
             </span>
           )}

@@ -36,7 +36,7 @@ export function NavUser({
     avatar: string;
   };
 }) {
-  const { isMobile } = useSidebar();
+  const { isMobile, open } = useSidebar();
 
   return (
     <SidebarMenu>
@@ -49,7 +49,9 @@ export function NavUser({
             >
               <Avatar className="h-auto w-auto rounded-lg">
                 <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="size-12 rounded-full bg-gray-soft-300">
+                <AvatarFallback
+                  className={`size-12 rounded-full ${open ? "size-12" : "size-8"} bg-gray-soft-300`}
+                >
                   <User fill="white" strokeWidth={0} size={28} />
                 </AvatarFallback>
               </Avatar>
