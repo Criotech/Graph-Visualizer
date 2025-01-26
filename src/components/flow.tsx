@@ -1,11 +1,11 @@
 "use client";
-import { ReactFlow, Position, Controls } from "@xyflow/react";
+import { ReactFlow, Position, MarkerType } from "@xyflow/react";
 import CustomNode from "./CustomNode";
 import { File } from "@/components/icons";
 
 import "@xyflow/react/dist/style.css";
 import { Server, ShieldX, Users, VenetianMask } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const nodeDefaults = {
   sourcePosition: Position.Right,
@@ -176,7 +176,7 @@ const initialNodes = [
       info: <InfoFour />,
     },
     type: "custom",
-    position: { x: 650, y: 0 },
+    position: { x: 650, y: -50 },
 
     ...nodeDefaults,
   },
@@ -193,16 +193,16 @@ const initialNodes = [
       info: <InfoFour />,
     },
     type: "custom",
-    position: { x: 650, y: 100 },
+    position: { x: 650, y: 150 },
     ...nodeDefaults,
   },
 ];
 
 const initialEdges = [
-  { id: "e1-2", source: "1", target: "2" },
-  { id: "e2-3", source: "2", target: "3" },
-  { id: "e3-4", source: "3", target: "4" },
-  { id: "e3-5", source: "3", target: "5" },
+  { id: "e1-2", source: "1", target: "2", type: "smoothstep", markerEnd: { type: MarkerType.Arrow } },
+  { id: "e2-3", source: "2", target: "3", type: "smoothstep", markerEnd: { type: MarkerType.Arrow }  },
+  { id: "e3-4", source: "3", target: "4", type: "bezier", markerEnd: { type: MarkerType.Arrow }  },
+  { id: "e3-5", source: "3", target: "5", type: "bezier", markerEnd: { type: MarkerType.Arrow }  },
 ];
 
 function Flow() {
@@ -240,7 +240,6 @@ function Flow() {
           padding: 0.5,
         }}
       >
-        <Controls />
       </ReactFlow>
     </div>
   );

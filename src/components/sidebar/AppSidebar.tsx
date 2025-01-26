@@ -22,6 +22,8 @@ import {
   MenuItem5,
   MenuItem6,
   MenuItem7,
+  MenuItem8,
+  MenuItem9,
 } from "../icons";
 
 const data = {
@@ -32,33 +34,33 @@ const data = {
   },
   navMain: [
     {
-      title: "Playground",
+      title: "Lorem",
       url: "#",
       icon: MenuItem1,
-      isActive: true,
     },
     {
-      title: "Models",
+      title: "Lorem",
       url: "#",
       icon: MenuItem2,
     },
     {
-      title: "Documentation",
+      title: "Lorem",
       url: "#",
       icon: MenuItem3,
     },
     {
-      title: "Settings",
+      title: "Lorem",
       url: "#",
       icon: MenuItem4,
+      isActive: true,
     },
     {
-      title: "Playground",
+      title: "Lorem",
       url: "#",
       icon: MenuItem5,
     },
     {
-      title: "Models",
+      title: "Lorem",
       url: "#",
       icon: MenuItem6,
     },
@@ -70,12 +72,12 @@ const data = {
     {
       title: "Lorem",
       url: "#",
-      icon: MenuItem6,
+      icon: MenuItem8,
     },
     {
       title: "Lorem",
       url: "#",
-      icon: MenuItem7,
+      icon: MenuItem9,
     },
   ],
 };

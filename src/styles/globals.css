@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -29,14 +29,32 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   ;
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%}
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --primary-green: 144 98% 30%;
+    --blue-100: 212 100% 92%;
+    --blue-600: 212 80% 48%;
+    --gray-7: 240 7% 43%;
+    --gray-soft-100: 223 13% 89%;
+    --gray-soft-300: 221 12% 68%;
+    --gray-soft-400: 200 11% 57%;
+    --gray-soft-500: 221 13% 46%;
+    --gray-soft-700: 220 17% 39%;
+    ---gray-soft-900: 221 20% 31%;
+    --green-mint-300: 145 63% 95%;
+    --green-mint-700: 144 100% 14%;
+    --green-700: 144 98% 30%;
+    --red-700: 4 78% 53%;
+    --orange-700: 35 100% 50%;
+    --slate-700: 215 25% 27%;
+  }
+    
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -71,6 +89,7 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%}
+  
 }
 @layer base {
   * {
@@ -79,4 +98,16 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.react-flow__handle {
+  opacity: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari */
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+  scrollbar-width: none;    /* Hides scrollbar in Firefox */
 }

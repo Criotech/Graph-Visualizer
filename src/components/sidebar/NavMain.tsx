@@ -32,15 +32,15 @@ export function NavMain({
           <SidebarMenuItem key={i}>
             <SidebarMenuButton
               tooltip={item.title}
-              className={`h-auto rounded-lg px-3 py-2.5 hover:bg-[#E9FAF0] ${item.isActive ? "bg-[#E9FAF0]" : ""}`}
+              className={`h-auto rounded-lg px-3 py-2.5 hover:bg-green-50 ${item.isActive ? "bg-green-mint-300" : ""}`}
             >
               <div className="flex items-center gap-2">
                 {item.icon && (
                   <item.icon
-                    className={`inline-block size-5 ${item.isActive ? "fill-black/90" : "fill-[#A3A9B6]"}`}
+                    className={`inline-block size-5 ${item.isActive ? "fill-green-mint-700" : "fill-gray-soft-300"}`}
                   />
                 )}
-                <span className="text-[15px] leading-[22px] text-[#525D73]">
+                <span className="text-15 leading-[22px] text-gray-soft-700">
                   {item.title}
                 </span>
               </div>
