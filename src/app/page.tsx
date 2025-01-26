@@ -199,7 +199,7 @@ const LeftPanel: FC = () => (
 );
 
 const RightPanel: FC = () => (
-  <div className="col-span-1 mt-[27px] h-fit rounded-[15px] bg-white px-[30px] py-5 shadow-light md:col-span-2 lg:col-span-2">
+  <div className="rounded-15 col-span-1 mt-[27px] h-fit bg-white px-[30px] py-5 shadow-light md:col-span-2 lg:col-span-2">
     <h1 className="text-xl font-bold text-[#02983E]">Lorem Lorem Lorem</h1>
     <div className="rounded-15 col-span-1 mt-5 bg-background px-[30px] py-5 shadow md:col-span-1">
       <Flow />
