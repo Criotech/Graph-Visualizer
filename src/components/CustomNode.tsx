@@ -15,6 +15,7 @@ type DataItem = {
   badgeBg: string;
   info: ReactNode;
   ip?: string;
+  badgeSize?: string;
 };
 
 function CustomNode({ data }: { data: DataItem }) {
@@ -28,8 +29,12 @@ function CustomNode({ data }: { data: DataItem }) {
           {data.icon}
           {data.badgeIcon && (
             <div
-              className={`absolute -top-1 right-2 flex h-4 w-4 items-center justify-center rounded-full`}
-              style={{ backgroundColor: data.badgeBg }}
+              className="absolute -top-1 right-2 flex items-center justify-center rounded-full"
+              style={{
+                height: data.badgeSize,
+                width: data.badgeSize,
+                backgroundColor: data.badgeBg,
+              }}
             >
               {data.badgeIcon}
             </div>
@@ -40,7 +45,7 @@ function CustomNode({ data }: { data: DataItem }) {
             {data.name}
           </span>
           {data.ip && (
-            <span className="text-center text-10 text-gray-soft-500 font-medium">
+            <span className="text-center text-10 font-medium text-gray-soft-500">
               {data.ip}
             </span>
           )}

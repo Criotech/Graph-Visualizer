@@ -9,7 +9,7 @@ const ContextualRisk = () => {
   ];
 
   return (
-    <div className="rounded-[15px] bg-white px-4 pb-5 pt-4 shadow-md sm:px-8">
+    <div className="rounded-15 bg-white px-4 pb-5 pt-4 shadow-md sm:px-8">
       <h2 className="text-gray-soft-500 mb-4 text-base font-semibold sm:text-lg">
         Contextual Risk
       </h2>

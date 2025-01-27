@@ -1,10 +1,10 @@
 "use client";
 import { ReactFlow, Position, MarkerType } from "@xyflow/react";
 import CustomNode from "./CustomNode";
-import { File } from "@/components/icons";
+import { File, Users, ShieldCancel } from "@/components/icons";
 
 import "@xyflow/react/dist/style.css";
-import { Server, ShieldX, Users, VenetianMask } from "lucide-react";
+import { Server, VenetianMask } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const nodeDefaults = {
@@ -53,7 +53,7 @@ const InfoTwo = () => {
           className="flex items-center justify-center rounded-full bg-blue-100"
           style={{ width: "39px", height: "39px" }}
         >
-          <Server size={20} className="text-blue-600" />
+          <Server size={19.66} className="text-blue-600" />
         </div>
         <h3 className="ml-3 text-13 font-semibold text-gray-800">Loremipsu</h3>
       </div>
@@ -96,7 +96,7 @@ const InfoFour = () => {
           <div
             className={`absolute -top-2 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#C6190D]`}
           >
-            <ShieldX size={10} color="#fff" />
+            <ShieldCancel size={10} color="#fff" />
           </div>
         </div>
         <h3 className="ml-3 text-13 font-semibold text-gray-800">Loremipsu</h3>
@@ -130,11 +130,12 @@ const initialNodes = [
     data: {
       id: "1",
       name: "Loremipsumm",
-      icon: <VenetianMask size={26} color="#C6190D" />,
+      icon: <VenetianMask size={26} color="#E5372B" />,
       iconBg: "#FFF1F0",
-      badgeIcon: <Users size={10} color="#fff" />,
-      badgeBg: "#6236CC",
+      badgeIcon: <Users color="#fff" />,
+      badgeBg: "#7A44FF",
       info: <InfoOne />,
+      badgeSize: "20px",
     },
     type: "custom",
     position: { x: 50, y: 50 },
@@ -172,12 +173,13 @@ const initialNodes = [
     data: {
       id: "4",
       name: "Loremipsumdolorsit",
-      icon: <Server size={26} color="#6236CC" />,
+      icon: <Server width={26} height={21.73} color="#6236CC" />,
       iconBg: "#ECF5FF",
-      badgeIcon: <ShieldX size={10} color="#fff" />,
-      badgeBg: "#C6190D",
+      badgeIcon: <ShieldCancel color="#fff" />,
+      badgeBg: "#E5372B",
       ip: "192.168.1.1",
       info: <InfoFour />,
+      badgeSize: "22px",
     },
     type: "custom",
     position: { x: 650, y: -50 },
@@ -191,10 +193,11 @@ const initialNodes = [
       name: "Loremipsumdolorsit002",
       icon: <Server size={26} color="#6236CC" />,
       iconBg: "#ECF5FF",
-      badgeIcon: <ShieldX size={10} color="#fff" />,
-      badgeBg: "#C6190D",
+      badgeIcon: <ShieldCancel color="#fff" />,
+      badgeBg: "#E5372B",
       ip: "192.168.1.1",
       info: <InfoFour />,
+      badgeSize: "22px",
     },
     type: "custom",
     position: { x: 650, y: 150 },
