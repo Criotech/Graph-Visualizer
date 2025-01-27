@@ -96,7 +96,7 @@ const InfoFour = () => {
           <div
             className={`absolute -top-2 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#C6190D]`}
           >
-            <ShieldCancel size={10} color="#fff" />
+            <ShieldCancel color="#fff" />
           </div>
         </div>
         <h3 className="ml-3 text-13 font-semibold text-gray-800">Loremipsu</h3>
